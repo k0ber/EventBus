@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">EventBus</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="event_bus_fragment_name">EventBus</string>
+    <string name="otto_bus_fragment_name">Otto</string>
+    <string name="rx_bus_fragment_name">RxBus</string>
+    <string name="normal_event_msg">event received in %1$d ns</string>
+    <string name="sticky_event_msg">sticky event received (%1$d)</string>
+
+    <string name="btn_send_event">Send event</string>
+    <string name="btn_send_event_sticky">Send event sticky</string>
+    <string name="btn_subscribe">Subscribe</string>
+    <string name="btn_unsubscribe">Unsubscribe</string>
+    <string name="btn_cancel_sticky_event">Cancel sticky event</string>
+
+</resources>

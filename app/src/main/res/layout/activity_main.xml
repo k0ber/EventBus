@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.nik.noveo.eventbus.activitys.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:id="@+id/event_bus_fragment"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="30%" />
+
+        <FrameLayout
+            android:id="@+id/otto_fragment"
+            android:layout_width="match_parent"
+            android:layout_below="@id/event_bus_fragment"
+            app:layout_heightPercent="30%" />
+
+        <FrameLayout
+            android:id="@+id/rx_bus_fragment"
+            android:layout_width="match_parent"
+            android:layout_below="@id/otto_fragment"
+            app:layout_heightPercent="30%" />
+
+        <Button
+            android:id="@+id/btn_subscribe"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/btn_subscribe"
+            android:textSize="12sp"
+            app:layout_widthPercent="20%" />
+
+        <Button
+            android:id="@+id/btn_unsubscribe"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btn_subscribe"
+            android:layout_toRightOf="@id/btn_subscribe"
+            android:text="@string/btn_unsubscribe"
+            android:textSize="12sp"
+            app:layout_widthPercent="20%" />
+
+        <Button
+            android:id="@+id/btn_send_event"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btn_unsubscribe"
+            android:layout_toRightOf="@id/btn_unsubscribe"
+            android:text="@string/btn_send_event"
+            android:textSize="12sp"
+            app:layout_widthPercent="20%" />
+
+        <Button
+            android:id="@+id/btn_send_sticky_event"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btn_send_event"
+            android:layout_toRightOf="@id/btn_send_event"
+            android:text="@string/btn_send_event_sticky"
+            android:textSize="12sp"
+            app:layout_widthPercent="20%" />
+
+        <Button
+            android:id="@+id/btn_cancel_sticky_event"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/btn_send_sticky_event"
+            android:layout_toRightOf="@id/btn_send_sticky_event"
+            android:text="@string/btn_cancel_sticky_event"
+            android:textSize="12sp"
+            app:layout_widthPercent="20%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
